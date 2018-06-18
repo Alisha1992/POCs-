@@ -135,7 +135,8 @@ stores$store_n<-stores$OperatingCost+stores$AcqCostPercust
    
 # 17.How to find missing values in the stores dataset and recode missing values with 0? How to delete the missing values (if there are any) from the data set?
      stores_miss<- sum(is.na(stores))
-     stores[is.na(stores),]<- 0
+     stores[is.na(stores)]
+     stores[is.na(stores)]<- 0
      View(stores)
     
 # 18. Sort the stores data as follows

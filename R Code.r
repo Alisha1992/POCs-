@@ -70,16 +70,15 @@ status <- factor(c("Poor", "Improved", "Excellent", "Poor"))
 statu1 <- factor(status,levels=c("Poor", "Improved", "Excellent"),ordered=TRUE)
 outcome <-factor(c(1, 3, 2, 4, 3, 1, 1),levels=c(1,2,3,4),ordered=TRUE)
 
-# 10. Create list called “mylist” with the title "My First List" and with the below objects called “ages” with below h, j and k. Also print the different combinations of objects.
-# a. h –numeric vector with the values 25, 26, 18, 39
-# b. j – matrix with 5 rows and 2 columns with the values 1 to 10
-# c. k – character vector with the values "one", "two", "three"
+# 10. Create list called â€œmylistâ€ with the title "My First List" and with the below objects called â€œagesâ€ with below h, j and k. Also print the different combinations of objects.
+# a. h â€“numeric vector with the values 25, 26, 18, 39
+# b. j â€“ matrix with 5 rows and 2 columns with the values 1 to 10
+# c. k â€“ character vector with the values "one", "two", "three"
 
 mylist<-list(h=c(25,26,18,39), j=matrix(c(1:10),5,2), k=c("one","two","three"))
 mylist
 
 # 11. Read the stores.csv data set and find the summary statistics for all the columns.
-setwd("C:/Users/al325478/Desktop/SASStudyPDfs/r/1. Introduction to R-Data Importing/DataSets for R sessions")
 stores<-read.csv("stores.csv")
 summary(stores)
 
@@ -120,15 +119,15 @@ stores$store_n<-stores$OperatingCost+stores$AcqCostPercust
    
    
 # 15. Create new variable store class as follows.
-# a. If total sales<120 then “Low Perform store”
-# b. If total sales>=120 and total sales<240 then “Average Perform store”
-# c. If total sales>240 then “High Perform store”
+# a. If total sales<120 then â€œLow Perform storeâ€
+# b. If total sales>=120 and total sales<240 then â€œAverage Perform storeâ€
+# c. If total sales>240 then â€œHigh Perform storeâ€
    
    stores$class1[stores$TotalSales<120]<-"Low"
    stores$class1[stores$TotalSales>=120 & stores$TotalSales<240]<-"Average"
    stores$class1[stores$TotalSales>240]<-"High"
    stores$class1
-# 16. Rename the variable “AcqCostPercust” with “AcqCost”
+# 16. Rename the variable â€œAcqCostPercustâ€ with â€œAcqCostâ€
    install.packages("reshape")
    library(reshape) 
    mydata <- rename(stores, c(AcqCostPercust="AcqCost"))
@@ -145,7 +144,7 @@ stores$store_n<-stores$OperatingCost+stores$AcqCostPercust
      x<- na.omit(stores_1)
      View(x)
 # 18. Sort the stores data as follows
-#      a. Create new dataset (newstores) with sorted data by “Storetype”
+#      a. Create new dataset (newstores) with sorted data by â€œStoretypeâ€
 #      b. Create new dataset (newstores) with sorted data by location(ascending) and totalsales in descending order.
 newstores<-stores_1[order(stores_1$StoreType,decreasing = TRUE),]
 newstores<-stores_1[order(stores_1$Location),]

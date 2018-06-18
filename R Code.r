@@ -134,15 +134,10 @@ stores$store_n<-stores$OperatingCost+stores$AcqCostPercust
    names(mydata)
    
 # 17.How to find missing values in the stores dataset and recode missing values with 0? How to delete the missing values (if there are any) from the data set?
-     stores_miss<- stores[is.na(stores)]
-     View(stores_miss)
-     stores[is.na(stores)]<- 0
+     stores_miss<- sum(is.na(stores))
+     stores[is.na(stores),]<- 0
      View(stores)
-     setwd("C:/Users/al325478/Desktop/SASStudyPDfs/r/1. Introduction to R-Data Importing/DataSets for R sessions")
-     stores_1<-read.csv("stores.csv")
-     View(stores_1)
-     x<- na.omit(stores_1)
-     View(x)
+    
 # 18. Sort the stores data as follows
 #      a. Create new dataset (newstores) with sorted data by “Storetype”
 #      b. Create new dataset (newstores) with sorted data by location(ascending) and totalsales in descending order.

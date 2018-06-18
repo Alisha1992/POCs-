@@ -49,14 +49,4 @@ c. If total sales>240 then “High Perform store”
 18. Sort the stores data as follows 
 a. Create new dataset (newstores) with sorted data by “Storetype” 
 b. Create new dataset (newstores) with sorted data by location(ascending) and totalsales in descending order. 
-19. Create vectors with date values with date formats. 
-a. "2014-06-22", "2014-02-13" 
-b. "01/05/1965", "08/16/1975" 
-20. Create subsets of data from stores data as following conditions. 
-a. Only Columns 5,7, 8,9 
-b. Excluding columns 5, 7, 8,9 
-c. Selecting first 10 observations 
-d. Observations with Storetype= Apparel and totalsales>100 
-e. Columns (storecode, storename, location and totalsales) with totalsales between 100 and 300. 
-f. Include all columns from Storecode to Basketsize with storetype=Electronics and totalsale>100 
 
